@@ -1,0 +1,7 @@
+[
+    {"name":"airpods", "brand":"apple","model":"pro", "price":20000},
+    {"name":"watch", "brand":"sansung", "model":"3", "price":15000},
+    {"name":"tv", "brand":"LG", "model":"cdkau344", "price": 70000},
+    {"name":"console", "brand":"sony", "model":"pro", "price":30000},
+    {"name":"mouse", "brand":"logitech", "model":"g402", "price":4000}
+]

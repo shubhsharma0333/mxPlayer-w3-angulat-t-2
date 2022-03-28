@@ -1,0 +1,24 @@
+<h1>Products</h1>
+
+<ul>
+    <li *ngFor="let fi of  products">{{fi.name}},{{fi.brand}},{{fi.model}}, {{fi.price}}</li>
+</ul>
+
+<div class="form-group" >
+    <label for="exampleInputEmail1">Min Price</label>
+    <input class="form-control" type="text"  class="form-control" [(ngModel)]="price">
+</div>
+
+<div class="form-group" >
+    <label for="exampleInputEmail1">Name</label>
+    <input class="form-control" type="text"  class="form-control" [(ngModel)]="name">
+</div>
+
+
+<button type="button" (click)="fByPrice()" class="btn btn-info">Filter with salary</button>
+<button type="button" (click)="fByName()" class="btn btn-info">Filter with name</button>
+
+<ul>
+    <li *ngFor="let fi of filter">{{fi.name}},{{fi.brand}},{{fi.model}}, {{fi.price}}</li>
+</ul>
+

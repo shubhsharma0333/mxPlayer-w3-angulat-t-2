@@ -1,0 +1,7 @@
+[
+    {"name": "Raghav", "salary": "30000", "department": "it", "city": "nagpur", "managerName":"Rawat"},
+    {"name": "Madhav", "salary": "40000", "department": "it", "city": "delhi", "managerName":"Tejas"},
+    {"name": "Abhinav", "salary": "70000", "department": "marketing", "city": "gurugram", "managerName":"yash"},
+    {"name": "Mintu", "salary": "35000", "department": "sales", "city": "nagpur", "managerName":"kataria"},
+    {"name": "Mohit", "salary": "45000", "department": "distribution", "city": "dehradun", "managerName":"Rawat"}
+]

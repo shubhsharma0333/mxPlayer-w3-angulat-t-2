@@ -1,0 +1,25 @@
+
+#mainDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 100px 30px; 
+       
+}
+#second{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  
+}
+
+h1{
+    text-align: center;
+    margin: 30px;
+}
+a{
+    text-decoration: none;
+    margin-right: 35px;
+}

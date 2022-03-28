@@ -1,0 +1,28 @@
+<h1>Employee</h1>
+
+<ul>
+    <li *ngFor="let fi of employess">{{fi.name}} ,{{fi.salary}} ,{{fi.department}} ,{{fi.city}} , {{fi.managerName}}</li>
+</ul>
+
+<div class="form-group" >
+    <label for="exampleInputEmail1">Min salary</label>
+    <input class="form-control" type="text"  class="form-control" [(ngModel)]="salary">
+</div>
+
+<div class="form-group" >
+    <label for="exampleInputEmail1">City</label>
+    <input class="form-control" type="text"  class="form-control" [(ngModel)]="city">
+</div>
+
+<div class="form-group" >
+    <label for="exampleInputEmail1">Manager Name</label>
+    <input class="form-control" type="text"  class="form-control" [(ngModel)]="mName">
+</div>
+
+
+<button type="button" (click)="fBySalary()" class="btn btn-info">Filter with salary</button>
+<button type="button" (click)="fByCity()" class="btn btn-info">Filter by City</button>
+<button type="button" (click)="fByMname()" class="btn btn-info">Filter by Manager Name</button>
+<ul>
+    <li *ngFor="let fi of filter">{{fi.name}} ,{{fi.salary}} ,{{fi.department}} ,{{fi.city}} , {{fi.managerName}}</li>
+</ul>

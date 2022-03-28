@@ -1,0 +1,98 @@
+<h3> Form Validation </h3>
+
+<form name="form" #frm="ngForm" (ngSubmit)="frm.valid && submit()">
+    <div class="form-group" >
+      <label for="exampleInputEmail1">Name</label>
+      <input class="form-control" type="text" id="name" name="name" class="form-control" required minlength="4" [(ngModel)]="user.name" #name="ngModel" pattern="^[a-zA-Z_ ]+$">
+    </div>
+    <div *ngIf="name.invalid && (name.dirty || name.touched)"class="alert">
+
+        <div *ngIf="name.errors?.['required']">
+            Name is required.
+        </div>
+        <div *ngIf="name.errors?.['minlength']">
+            Name must be at least 4 characters long.
+        </div>
+        <div *ngIf="name.errors?.['pattern']">
+            Name cannot contain anything other then alphabets.
+        </div>
+
+    </div>
+    <div class="form-group" >
+        <label for="exampleInputEmail1">Email</label>
+        <input class="form-control" type="text" id="email" name="email" class="form-control" required  [(ngModel)]="user.email" #email="ngModel" pattern="^([a-zA-z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z]{2,4})+$">
+    </div>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)"class="alert">
+  
+        <div *ngIf="email.errors?.['required']">
+              Email is required.
+        </div>
+          
+        <div *ngIf="email.errors?.['pattern']">
+            Not a proper format.
+        </div>
+  
+    </div>
+
+    <div class="form-group" >
+        <label for="exampleInputEmail1">City</label>
+        <input class="form-control" type="text" id="city" name="city" class="form-control" required  [(ngModel)]="user.city" #city="ngModel" pattern="^[a-zA-Z_ ]+$">
+    </div>
+    <div *ngIf="city.invalid && (city.dirty || city.touched)"class="alert">
+  
+        <div *ngIf="city.errors?.['required']">
+              city is required.
+        </div>
+          
+        <div *ngIf="city.errors?.['pattern']">
+            Not a proper format.
+        </div>
+  
+    </div>
+
+    <div class="form-group" >
+        <label for="exampleInputEmail1">Phone Number</label>
+        <input class="form-control" type="text" id="phNo" name="phNo" class="form-control" required minlength="10"  [(ngModel)]="user.phoneNumber" #phNo="ngModel" pattern="^[0-9]+$">
+    </div>
+    <div *ngIf="phNo.invalid && (phNo.dirty || phNo.touched)"class="alert">
+  
+        <div *ngIf="phNo.errors?.['required']">
+            Phone Number is required.
+        </div>
+          
+        <div *ngIf="phNo.errors?.['pattern']">
+            Only Numbers are allowed.
+        </div>
+        
+        <div *ngIf="phNo.errors?.['minlength']">
+            Should have atleat 10 characters.
+        </div>
+  
+    </div>
+
+    <div class="form-group" >
+        <label for="exampleInputEmail1">Pincode</label>
+        <input class="form-control" type="text" id="pincode" name="pincode" class="form-control" required minlength="6"  [(ngModel)]="user.pincode" #pincode="ngModel" pattern="^[0-9]+$">
+    </div>
+    <div *ngIf="pincode.invalid && (pincode.dirty || pincode.touched)"class="alert">
+  
+        <div *ngIf="pincode.errors?.['required']">
+            Pincode is required.
+        </div>
+          
+        <div *ngIf="pincode.errors?.['pattern']">
+            Only Numbers are allowed.
+        </div>
+        
+        <div *ngIf="pincode.errors?.['minlength']">
+            Should have atleat 6 characters.
+        </div>
+  
+    </div>
+
+    <div id="but">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    
+</form>
+

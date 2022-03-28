@@ -1,0 +1,15 @@
+.form-group{
+    margin: 30px 90px;
+}
+
+#but{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;;
+}
+
+h3{
+    text-align: center;
+    color:grey;
+}
